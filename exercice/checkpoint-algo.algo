@@ -1,0 +1,28 @@
+ALGORITHM sentence
+VAR
+character := CHAR;
+count_vowel,  : INTEGER := 0;
+L , count_word:INTEGER := 1;
+
+BEGIN
+
+read (character); 
+
+WHILE (character <> '.') DO
+    L := L+1;
+    IF (character:= ' ')
+     THEN
+        count_word := count_word +1;
+    ELSE IF ( ToUpper(character) in ['A','E','I','O','U'])
+    THEN count_vowel:= count_vowel +1;
+        
+    END_IF
+    Read (character);
+  
+END_WHILE
+
+ write ('The sentence length is:', L);
+ write ('The number of words is', count_word );
+ write ('The number of vowels id',count_vowel )
+
+ END
